@@ -15,8 +15,8 @@ On your repository, click the copy clone url and clone it on your local machine
 c. Add an upstream
 ----
 ```
-cd GA_WDI7_NEW
-git remote add upstream git@github.com:ga-students/GA_WDI7_NEW.git
+cd WDI_SYD_7_NEW
+git remote add upstream git@github.com:ga-students/WDI_SYD_7_NEW.git
 git pull upstream master
 ```
 
@@ -25,7 +25,7 @@ d. Add Homework
 When adding homework, create a folder for the week, then for the day, then put your homework in that day
 
 ```
-cd GA_WDI7_NEW
+cd WDI_SYD_7_NEW
 cd firstname
 mkdir wk4
 cd wk4
