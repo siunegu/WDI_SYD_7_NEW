@@ -39,12 +39,12 @@ class SongsController < ApplicationController
 	end
 
 	private
-	def artist_params
-  	params.require(:recipe).permit(
+	def song_params
+  	params.require(:song).permit(
   	 :name,
   	 :genre,
 	 	 :year,
-	 	 :artist_ids
+	 	 :artist_id
 	 	 )		
 	end
 end

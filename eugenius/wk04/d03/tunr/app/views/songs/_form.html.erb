@@ -1,0 +1,16 @@
+<%= form_for @song do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name, :placeholder => 'Song Name' %>
+
+	<%= f.label :genre %>	
+	<%= f.text_field :genre, :placeholder => 'Genre Name' %>
+
+	<%= f.label :year %>	
+	<%= f.number_field :year, :placeholder => 'year Released' %>
+	
+	<%= f.label :artist_id %>
+	<%= f.collection_select :artist_id, Artist.all, :id, :name %>
+
+
+	<%= f.submit %>
+<% end %>
