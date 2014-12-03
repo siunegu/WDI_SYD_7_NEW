@@ -1,4 +1,4 @@
 class PlaylistSongs < ActiveRecord::Base
-	belongs_to :songs
 	belongs_to :playlist
+	belongs_to :song
 end

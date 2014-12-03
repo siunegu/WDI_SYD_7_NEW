@@ -8,8 +8,14 @@
 </head>
 <body>
 
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
+<div class="nav">
+	<%= link_to 'Songs', songs_path %>
+	<%= link_to 'Artists', artists_path %>
+	<%= link_to 'Playlists', playlists_path %>
+</div>
+
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 	
  <%= yield %>
 
