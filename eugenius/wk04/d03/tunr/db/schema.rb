@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 20141203034159) do
     t.datetime "updated_at"
   end
 
+  create_table "playlist_songs", force: true do |t|
+    t.integer  "song_id"
+    t.integer  "playlist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "playlists", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -32,13 +39,6 @@ ActiveRecord::Schema.define(version: 20141203034159) do
     t.string   "genre"
     t.integer  "year"
     t.integer  "artist_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "songs_playlists", force: true do |t|
-    t.integer  "song_id"
-    t.integer  "playlist_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
