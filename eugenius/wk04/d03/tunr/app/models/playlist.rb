@@ -9,6 +9,6 @@
 #
 
 class Playlist < ActiveRecord::Base
-	has_many :songs_playlists
-	has_many :songs, through: :songs_playlists
+	has_many :playlist_songs
+	has_many :songs, through: :playlist_songs
 end

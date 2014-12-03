@@ -45,6 +45,8 @@
 
 Rails.application.routes.draw do
   
+  get 'playlists/index'
+
   resources :artists
   resources :songs
   resources :playlists

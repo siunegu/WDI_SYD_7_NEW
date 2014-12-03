@@ -1,0 +1,10 @@
+<p><%= @playlist.name %></p>
+
+	<button>
+		<%= link_to 'Edit', edit_playlist_path(@playlist) %>
+	</button>
+	<button>
+		<%= link_to 'Destroy', @playlist, method: :destroy %>
+	</button>	
+
+<%= link_to 'Back to Playlists', playlists_path %>
