@@ -1,0 +1,138 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+@import url(http://fonts.googleapis.com/css?family=Cookie);
+
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */	
+}
+
+html {
+	font-family: 'PT Sans Narrow', sans-serif;
+	color: gray;
+	font-size: 18px;
+}
+
+p {
+	line-height: 1.5em;	
+}
+
+a {
+	color: #ef5301;	
+}
+
+#main {
+	width: 540px;
+	margin: 0 auto;
+}
+
+#main img {
+	width: 100%;
+}
+
+.container {
+	padding: 25px;
+}
+
+footer {
+	text-align: center;
+	padding: 10px 10px;
+	margin: 100px auto;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+hr {
+	border: 1px solid gray;
+	border-color: #47BEC2;	
+	border-top: none;
+	border-left: none;
+	border-right: none;		
+}
+
+.long-hr {
+	width: 540px;
+}
+
+.medium-hr {
+	width: 480px;
+}
+
+#nav {
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	margin-bottom: 60px;
+}
+
+#nav a {
+	text-transform: uppercase;
+	font-size: 0.6em;
+	padding: 10px;
+	color: #47BEC2;	
+	font-size: 1.5em;
+	font-family: 'Arvo', serif;		
+}
+
+.logo {
+	text-align: center;
+	margin: 0 auto;
+	padding: 2em 0;
+}
+
+.logo h1 {
+	font-family: 'Cookie', cursive;
+	font-weight: bold;
+	letter-spacing: -0.01em;
+}
+
+.logo h1 a {
+	font-size: 5em;	
+	color: #ef6628;
+}
+
+h2, h3, h4 {
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+#errors {
+	color: red;
+}
+
+button {
+	background-color: #47BEC2;
+	padding: 0.8em 1em;
+	border: 0;
+	border-radius: 2px;
+}
+
+button a {
+	font-size: 1.2em;
+	color: white;
+}

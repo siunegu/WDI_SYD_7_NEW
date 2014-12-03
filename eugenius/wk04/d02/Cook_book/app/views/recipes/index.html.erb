@@ -1,0 +1,15 @@
+<%= link_to '+ New Recipe', new_recipe_path %>
+
+<hr>
+<ul>
+		<% @recipes.each do |recipe|  %>
+		<li>
+			<h3><%= link_to recipe.name, recipe %></h3>
+			<p><%= recipe.course %></p>
+			<p><%= image_tag recipe.image %></p>
+			<button><%= link_to 'Edit', edit_recipe_path(recipe) %></button>
+			<button><%= link_to 'Destroy', recipe, method: :delete  %></button>	
+		</li>	
+		<hr>
+		<% end %>
+</ul>

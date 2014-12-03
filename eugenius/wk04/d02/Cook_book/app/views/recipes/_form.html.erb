@@ -1,0 +1,37 @@
+<%= form_for @recipe do |f| %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :course %>
+		<%= f.text_field :course %>
+	</p>
+	<p>
+		<%= f.label :cooktime, 'Cook Time' %>
+		<%= f.text_field :cooktime, :placeholder => '10 Hours' %>
+	</p>	
+	<p>
+		<%= f.label :servingsize, 'Serving Size' %>
+		<%= f.text_field :servingsize %>
+	</p>		
+	<p>
+		<%= f.label :instructions %>
+		<%= f.text_area :instructions %>
+	</p>	
+	<p>
+		<%= f.label :image %>
+		<%= f.text_field :image %>
+	</p>
+	<p>
+		<%= f.label :book_id %>
+		<%= f.collection_select :book_id, Book.all, :id, :title %>		
+	</p>
+	<p>
+		<%= f.label :ingredient_ids %>
+		<%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
+	</p>
+	<p>
+		<%= f.submit %>	
+	</p>	
+<% end %>

@@ -1,0 +1,16 @@
+
+<h2><%= @book.title %></h2><br>
+<small><%= @book.cuisine %> food, by <%= @book.chef %></small>
+
+<br><br>
+
+<div><%= image_tag @book.image %></div>
+
+<br><br>
+
+<button>
+	<%= link_to "Edit", edit_book_path(@book) %>
+</button>
+<button>
+	<%= link_to "Destroy", @book, method: :destroy %>
+</button>

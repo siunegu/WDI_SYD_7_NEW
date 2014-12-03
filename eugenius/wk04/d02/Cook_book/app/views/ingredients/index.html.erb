@@ -1,0 +1,13 @@
+<%= link_to 'New Ingredient', new_ingredient_path %>
+<ul>
+	<% @ingredients.each do |ingredient| %>
+	<li>
+		<h3><%= link_to ingredient.name, ingredient %></h3>
+		<p><%= image_tag ingredient.image %></p>
+		<p><%= ingredient.measurement %></p>
+		<p><%= ingredient.cost %></p>		
+		<p class="button"><%= link_to 'Edit', edit_ingredient_path(ingredient) %></p>
+		<p class="button"><%= link_to 'Destroy', ingredient, method: :delete %></p>
+	</li>
+	<% end %>
+</ul>

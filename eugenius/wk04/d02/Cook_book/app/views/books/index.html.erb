@@ -1,0 +1,14 @@
+<%= link_to '+ Add Book', new_book_path %>
+
+<hr>
+<ul>
+		<% @books.each do |book|  %>
+		<li>
+			<h2><%= link_to book.title, book %></h2>
+			<p>by <%= book.chef %></p>
+			<button><%= link_to 'Edit', edit_book_path(book) %></button>
+			<button><%= link_to 'Destroy', book, method: :delete  %></button>	
+		</li>	
+		<% end %>
+</ul>
+
