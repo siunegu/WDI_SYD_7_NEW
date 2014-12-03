@@ -1,0 +1,13 @@
+<p>Artist's Name: <%= @artist.name %></p>
+<p>Label: <%= @artist.label %></p>
+<p>Location: <%= @artist.location %></p>
+	
+	<button>
+		<%= link_to 'Edit', edit_artist_path(@artist) %>
+	</button>
+	<button>
+		<%= link_to 'Destroy', @artist, method: :destroy %>
+	</button>	
+
+
+<%= link_to 'Back to Artists Lists', artists_path %>
