@@ -1,0 +1,46 @@
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>    
+    </div>    
+  </div>
+
+  <div class="row">
+
+    <div class="col-xs-8 col-md-9">
+      <h2>Listing articles</h2>
+    </div>
+
+    <div class="col-xs-4 col-md-3">
+    </div>
+
+  </div>
+
+
+  <% @articles.each do |article| %>
+  <div class="row">
+
+    <div class="col-md-9">
+      <h3><%= article.title %></h3>
+      <p><%= article.content %></p>
+      <p>
+        <%= link_to "Show", class: "btn btn-info" do %>
+          <span class="glyphicon glyphicon-flash"></span> Show
+        <% end %>
+        <%= link_to "Edit", class: "btn btn-default" do %>
+          <span class="glyphicon glyphicon-edit"></span> Edit
+        <% end %>               
+        <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      </p>      
+    </div>
+
+    <div class="col-md-3">
+
+    </div> 
+  </div>
+
+  <% end %>
+
+
+
+

@@ -1,0 +1,163 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *= require normalize
+ *= require_self
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:500,900,300);
+
+* {
+ 	box-sizing: border-box;
+ 	-moz-box-sizing: border-box; 	
+ 	-o-box-sizing: border-box; 	
+ }
+
+html {
+	background-color: #f2f2f2;
+	font-family: 'Raleway', sans-serif;	
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	margin-top: 60px;
+}
+
+header {
+	padding: 55px 0 25px 0;
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+#logo_box {
+	padding: 0;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+#logo {
+	text-align: center;
+	img {
+		margin: 0;
+		padding: 5px;
+		width: 120px;
+		-webkit-transition: all 600ms cubic-bezier(0, 0, 0.3, 1);			
+	}
+}
+
+#logo img {
+	margin: 0;
+	padding: 5px;
+	width: 120px;
+	-webkit-transition: all 600ms cubic-bezier(0, 0, 0.3, 1);
+}
+
+#logo img:hover {
+	width: 140px;
+	padding-bottom: 5px;
+}
+
+#wrapper {
+ 	margin: 0 auto;
+ 	width: 45%;
+ 	height: 45em;
+}
+
+#sign_in_up {
+	margin: 15px 0;
+	text-align: center;
+}
+
+.nav {
+ 	margin: 25px auto 15px;
+ 	width: 35em;
+ 	text-align: center;
+}
+
+.nav a {
+ 	color: black;
+ 	font-size: 1em;
+ 	font-weight: 300;	
+ 	text-transform: uppercase;
+ 	padding: 0.4em 0.8em;	
+ 	-webkit-transition: all 600ms linear;
+}
+
+.nav a:hover {
+	color: rgb(66, 255, 185);
+}
+
+#ui_top {
+	padding: 0.4em 1.4em;
+	text-align: center;
+	margin: 5px 0;
+}
+
+.selection {
+	display: inline-block;
+	width: 100%;
+	padding: 1em;	
+	-webkit-transition: all 500ms cubic-bezier(0, 0, 0.3, 1);
+}
+
+.selection:hover {
+	background-color: #f2f2f2;
+	color: rgb(66, 255, 185) !important;
+}
+
+button {
+	margin: 0 5px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	border: 0;
+	border-radius: 3px;
+	background-color: rgb(66, 255, 185);
+	color: white;
+}
+
+button a {
+	color: white;
+}
+
+#container {
+	padding: 25px;
+}
+
+hr {
+	border-style: dotted;
+	border-coor: gray;
+}
+
+a {
+ 	text-decoration: none;
+ 	color: black;
+}
+
+ul, li {
+	list-style-type: none;
+	padding: 0;
+}
+
+h1, h2, h3, h4 {
+ 	font-weight: 300;		
+ 	color: gray;	
+}
+
+#ui_top h2 {
+	font-weight: 300;
+	font-size: 1.2em;
+	line-height: 0;
+	text-transform: uppercase;
+}
