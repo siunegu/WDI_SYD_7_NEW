@@ -1,10 +1,21 @@
 <p><%= @playlist.name %></p>
-
+<ul>
+	<% @playlist.songs.each do |song| %>
+		<li>
+			<hr>
+			<%= song.name %>
+			<hr>
+		</li>
+	<% end %>
+</ul>
+  <% if user_signed_in? && (current_user.admin? || current_user.playlist_ids.include?(@playlist.id)) %>
 	<button>
 		<%= link_to 'Edit', edit_playlist_path(@playlist) %>
 	</button>
 	<button>
 		<%= link_to 'Destroy', @playlist, method: :destroy %>
 	</button>	
-
+	<% end %>
+<button style="background-color:black;">
 <%= link_to 'Back to Playlists', playlists_path %>
+</button>

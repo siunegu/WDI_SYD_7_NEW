@@ -7,17 +7,44 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+<section id="logo_box">
+<div id="logo">
+	<%= link_to root_path do %>
+		<%= image_tag "logo.png" %>
+	<% end %>
+</div>
+</section>
+
+<div id="sign_in_up">
+    <p id="user_links">
+    <% if user_signed_in? %>
+      Signed in as: <%= current_user.email %>
+      (<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>)
+    <% else %>
+      <%= link_to "Sign In", new_user_session_path %> |
+      <%= link_to "Sign Up", new_user_registration_path %>
+    <% end %>
+    </p>	
+</div>
 
 <div class="nav">
 	<%= link_to 'Songs', songs_path %>
 	<%= link_to 'Artists', artists_path %>
 	<%= link_to 'Playlists', playlists_path %>
 </div>
+</header>
 
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-	
- <%= yield %>
+<main>
+<div id="wrapper">
+	<div id="container">
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
 
+
+	 <%= yield %>
+	</div>
+</div>
+</main>
 </body>
 </html>

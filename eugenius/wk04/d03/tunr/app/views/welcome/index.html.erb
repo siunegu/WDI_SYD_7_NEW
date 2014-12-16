@@ -1,4 +1,7 @@
-<%= link_to 'Artists', artists_path %>
-<%= link_to 'Playlists', playlists_path %>
-<%= link_to 'Songs', songs_path %>
-
+<h2>Recent Playlists</h2>
+<% @playlists.each do |playlist| %>
+	<hr>
+	<%= link_to playlist.name, playlist %>
+	<hr>
+	<br>
+<% end %>

@@ -1,15 +1,26 @@
-<h2>List of Songs</h2>
-<ul>
-	<li><%= link_to '+ Add Song', new_song_path %></li>
-</ul>
+<div id="ui_top">
+	<h2>Songs</h2>
+</div>
+
+<% if user_signed_in? && current_user.admin? %>
+<%= link_to '+ Add Song', new_song_path %>
+<% end %>
 
 <ul>
 	<% @songs.each do |song| %>
 		<li>
-			<h3><%= link_to song.name, song %></h3>
-			<button>
-				<%= link_to 'Edit', edit_song_path(song) %>
-			</button>
+		<section class="selection">
+		<hr>
+			<article>
+			<%= link_to song.name, song %>
+			<% if user_signed_in? && current_user.admin? %>
+				<button>
+					<%= link_to 'Edit', edit_song_path(song) %>
+				</button>
+			<% end %>
+			</article>
+		<hr>			
+		</section>			
 		</li>	
 	<% end %>
 </ul>

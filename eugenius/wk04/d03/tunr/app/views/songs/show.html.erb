@@ -2,14 +2,15 @@
 <p>Genre: <%= @song.genre %></p>
 <p>Year: <%= @song.year %></p>
 <p>Artist: <%= @song.artist.name %></p>
-	
-	<button>
-		<%= link_to 'Edit', edit_song_path(@song) %>
-	</button>
-	<button>
-		<%= link_to 'Destroy', @song, method: :destroy %>
-	</button>	
 
+<% if user_signed_in? %>	
+<button>
+	<%= link_to 'Edit', edit_song_path(@song) %>
+</button>
+<button>
+	<%= link_to 'Destroy', @song, method: :delete %>
+</button>	
+<% end %>
 
 <%= link_to 'Back to Songs Lists', songs_path %>
 

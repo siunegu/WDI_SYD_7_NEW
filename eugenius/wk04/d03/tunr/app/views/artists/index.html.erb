@@ -1,15 +1,25 @@
 <h2>List of Artists</h2>
-<ul>
-	<li><%= link_to '+ Add Artist', new_artist_path %></li>
-</ul>
+
+<% if user_signed_in? && current_user.admin? %>
+<p><%= link_to '+ Add Artist', new_artist_path %></p>
+<% end %>
 
 <ul>
 	<% @artists.each do |artist| %>
 		<li>
-			<h3><%= link_to artist.name, artist %></h3>
-			<button>
-				<%= link_to 'Edit', edit_artist_path(artist) %>
-			</button>
+		<section class="selection">
+		<hr>
+			<article>		
+			<%= link_to artist.name, artist %>
+			<% if user_signed_in? && current_user.admin? %>
+				<button>
+					<%= link_to 'Edit', edit_artist_path(artist) %>
+				</button>
+			<% end %>
+			</article>
+		<hr>			
+		</section>			
+		</li>				
 		</li>	
 	<% end %>
 </ul>

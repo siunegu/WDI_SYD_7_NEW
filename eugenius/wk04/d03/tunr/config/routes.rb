@@ -1,6 +1,7 @@
 # == Route Map
 #
 #                   Prefix Verb   URI Pattern                    Controller#Action
+#          playlists_index GET    /playlists/index(.:format)     playlists#index
 #                  artists GET    /artists(.:format)             artists#index
 #                          POST   /artists(.:format)             artists#create
 #               new_artist GET    /artists/new(.:format)         artists#new

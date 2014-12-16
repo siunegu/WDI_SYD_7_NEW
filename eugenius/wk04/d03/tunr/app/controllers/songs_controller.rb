@@ -1,4 +1,6 @@
 class SongsController < ApplicationController
+  before_action :authorize_admin!, except: [:index, :show]
+
 	def index
 		@songs = Song.all
 	end	
