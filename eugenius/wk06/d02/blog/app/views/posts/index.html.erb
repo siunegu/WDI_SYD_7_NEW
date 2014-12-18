@@ -1,6 +1,7 @@
 <% unless Post.count == 0 %>
 
 	<% @posts.each do |post| %>
+		<%= link_to post.title, post_path(post) %>
 		<%= post.title %>
 		<%= post.author %>
 		<%= post.content %>
@@ -9,3 +10,13 @@
 <% else %>
 	No blog posts found
 <% end %>
+
+<%#= link_to "Hello World", post_path %>
+<!-- 
+You need to wrap that link with some sort of validation that checks whether the post exists.
+
+What I would suggest, is instead of doing it like this, use the each loop on line 3 to get the link -->
+
+<!-- Apart from that - all your tests where sweet.  
+ -->
+<%= link_to "Add Post", new_post_path %>

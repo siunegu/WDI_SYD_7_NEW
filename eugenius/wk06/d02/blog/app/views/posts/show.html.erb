@@ -1,0 +1,15 @@
+<%= @post.title %>
+<br>
+<%= @post.author %>
+<br>
+<%= @post.content %>
+<br>
+<% unless @post.comments.count == 0 %>
+	<% @post.comments.each do |comment| %>
+		<br>
+		<%= comment.author %>
+		<br>
+		<%= comment.content %>
+		<br>
+	<% end %>
+<% end %>
