@@ -1,11 +1,3 @@
-document.getElementById("calc_form").onsubmit = function() {
-	var firstNumber = parseInt(document.getElementById("first_number").value);
-	var secondNumber = parseInt(document.getElementById("second_number").value);
-	var operator = document.getElementById("operation").value;
-	calculate(firstNumber, secondNumber, operator);
-	document.getElementById("result").innerHTML = result;
-}
-
 var calculate = function(firstNumber, secondNumber, operator) { 
 	switch (operator) {
 		case "add":
@@ -21,4 +13,12 @@ var calculate = function(firstNumber, secondNumber, operator) {
 			result = (firstNumber / secondNumber);
 			break;			
 	}
+}
+
+document.getElementById("calc_form").onsubmit = function() {
+	var firstNumber = parseInt(document.getElementById("first_number").value);
+	var secondNumber = parseInt(document.getElementById("second_number").value);
+	var operator = document.getElementById("operation").value;
+	calculate(firstNumber, secondNumber, operator);
+	document.getElementById("result").innerHTML = result;
 }
