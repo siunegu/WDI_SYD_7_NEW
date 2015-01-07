@@ -1,0 +1,31 @@
+* { box-sizing: border-box ;}
+
+body {
+	background-color: #f7f7f7;
+}
+
+a {
+  color: red;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#container {
+	width: 80%;
+	background-color: #fff;
+	overflow: hidden;
+	margin: 20px auto;
+	padding: 25px;
+}
+
+.tag {
+	text-align: center;
+	float: left;
+	width: 25%;
+	border: 10px solid white;
+	padding: 20px;
+	/*margin: 10px;*/
+	background-color: #eee;
+	border-radius: 10px;
+}
