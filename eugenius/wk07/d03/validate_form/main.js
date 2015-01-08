@@ -17,7 +17,7 @@ $(function() {
 
   	var firstValid = validate( firstNameValue, "#user_first_name" );
   	var lastValid = validate( lastNameValue, "#user_last_name" );
-
+  	// Prevents the form from actually submitting an HTTP request.
   	if ( !firstValid && !lastValid ) {
   		event.preventDefault();
   	}

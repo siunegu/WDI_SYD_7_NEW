@@ -1,0 +1,18 @@
+<%= form_for @todo do |f| %>
+	<p>
+		<%= f.label :text %>
+		<%= f.text_field :text %>
+	</p>
+	<p>
+		<%= f.label :notes %>
+		<%= f.text_field :notes %>
+	</p>
+	<p>
+		<%= f.check_box :completed %>
+		<%= f.label :completed, "Done!" %>
+		<!-- "Done!" sets the default "Completed" to be something else. -->
+	</p>		
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

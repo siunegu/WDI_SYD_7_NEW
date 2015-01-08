@@ -18,17 +18,23 @@ var letters = _.shuffle( lettersSmall );
 
 //last card/letter you clicked on. comes from the letter divs.
 var lastId = '',
-    lastCard = '';
+    lastCard ;
+
+
 
 //Code In Here gets executed once code is ready. ie hovering, clicking events//
 $(function() {
 	// Only happen when the 'click' is registered in a 'div' within the '#game':
-	$("#game").on("click", "div", function() {
+	$("#game").on("click", "div", function() {	
 		var index = parseInt( $(this).attr("id") );
 		var whichLetter = letters[ index ];
 		$(this).text(whichLetter);
-	});
+	});	
+	startGame();
+});
 
+// Initializes the game and creates the board
+function startGame() {
 	$("#small").on("click", function() {
 		var $game = $("#game");
 
@@ -38,11 +44,7 @@ $(function() {
 				.appendTo($game)
 				.attr("id", index);
 		});
-	});
-});
-
-// Initializes the game and creates the board
-function startGame() {
+	});	
 
 }
 

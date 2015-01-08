@@ -1,0 +1,7 @@
+<h3><%= @todo.text %></h3>
+<h4>Complete: <%= @todo.completed ? "Yes" : "No" %></h4>
+<p><em><%= @todo.updated_at %></em></p>
+<p><%= @todo.notes %></p>
+
+<p><%= link_to "Edit", edit_todo_path %></p>
+<p><%= link_to "Destroy", @todo, method: :delete %></p>
