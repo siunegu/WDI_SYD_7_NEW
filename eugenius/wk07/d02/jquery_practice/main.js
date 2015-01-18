@@ -25,10 +25,12 @@ $(function() {
 		}		
 	});
 
+	
 	$("#todo-list").on("dblclick", "p", function() {
 		var todoText = $(this).find("span").hide().text();
 		$(this).find("input").show().val( todoText );
 	});
+
 	// Remove on clicking the button inside the p tag
 	$("#todo-list").on("click", "p button", function() {
 		$(this).parent().slideUp( 300, function() {

@@ -40,8 +40,8 @@ function startGame() {
 
 		_.each(lettersSmall, function(letter, index) {
 			$("<div></div>")
-				.addClass("column")
-				.appendTo($game)
+				.addClass("column") // Gives it the class column
+				.appendTo($game) 
 				.attr("id", index);
 		});
 	});	
