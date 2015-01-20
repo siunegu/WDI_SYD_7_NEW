@@ -20,14 +20,14 @@
 //= require_tree .
 
 
-var statusCollection = new Statuses();
+var schoolCollection = new Schools();
 
-statusCollection.on("add", function(status) {
+schoolCollection.on("add", function(school) {
 	$("body").append(
-		HandlebarsTemplates['status'](
-			status.toJSON()
-		)	
+		JST['school'](
+			school.toJSON()
+		)
 	);
 });
 
-statusCollection.fetch();
+schoolCollection.fetch();
