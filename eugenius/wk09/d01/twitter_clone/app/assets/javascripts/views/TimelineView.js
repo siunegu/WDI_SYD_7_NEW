@@ -1,10 +1,17 @@
-var TimelineView = Backbone.View.extend.extend({
+var TimelineView = Backbone.View.extend({
 	tagName: "div",
-	className: "timeline"
+	className: "timeline",
 
-	template: HandlbarsTemplates['statuses/timeline' ],
-	
+	template: JST['statuses/timeline'],
+
+	initialize: function() {
+		this.collection.fetch();
+		this.collection.on("sync", this.render, this);
+	},
+
 	render: function() {
-
+		this.collection.each(function(status) {
+			var statusView = new StatusView({ model:status });
+		});
 	}     
 });
