@@ -4,14 +4,11 @@ var TimelineView = Backbone.View.extend({
 
 	initialize: function() {
 		this.collection.fetch();
-		this.collection.on("sync", this.render, this);
+		this.collection.on("add", this.addStatus, this);
 	},
 
-	render: function() {
-		var self = this;
-		this.collection.each(function(status) {
-			var statusView = new StatusView({ model:status });
-			self.$el.append(statusView.render().el); // self refers to the actual timeline view
-		});
-	}     
+	addStatus: function(status) {
+		var statusView = new StatusView({ model: status });
+		this.$el.append(statusView.render().el);
+	}
 });
