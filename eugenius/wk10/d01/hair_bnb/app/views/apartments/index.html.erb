@@ -1,0 +1,7 @@
+<% @apartments.each do |apartment| %>
+	<%= apartment.title %>
+<% end %>
+
+<% if @apartments.count == 0 %>
+	There are no apartments available
+<% end %>
