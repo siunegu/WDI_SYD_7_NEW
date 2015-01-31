@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+
+html {
+	background-color: #ddd;
+}
+
+#wrap {
+	background-color: #fff;
+	width: 760px;
+	margin: 0 auto;
+}
+
+#items {
+	padding: 25px;
+	border: 1px solid #ddd;
+}
+
+
